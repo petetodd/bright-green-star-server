@@ -1,15 +1,17 @@
 bright-green-star-server
 ========================
 
-A rails server with devise security that will respond to json requests from an iOS app (see bright-green-star-client).   
+A rails server with devise security that will respond to json requests from an iOS app (see bright-green-star-client). 
+
 Rails version 4.0.2
+
 Ruby 2.0.0
 
 You can just download and run the server, but if you want to build from scratch follow this (and refer to the code as needed).
 
 Create the Rails app
 
-rails new bgsserver 
+    rails new bgsserver 
 
 #Gemfile changes
 
@@ -197,6 +199,11 @@ Now when you save a trip its all working.
 
 Time to implement this in the iOS app.  Out iOS functionality will do all that the cURL tests did (and more!).
 
+#Additional Devise change to support iOS
+In config/initializers/devise.rb, ensure the following are set
+
+    config.navigational_formats = ['*/*', :html, :json]
+    config.http_authenticatable = true
 
 
 
