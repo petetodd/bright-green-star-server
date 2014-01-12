@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trip.name %>
+</p>
+
+<p>
+  <strong>Typetrip:</strong>
+  <%= @trip.typetrip %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @trip.content %>
+</p>
+
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %>
